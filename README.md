@@ -23,7 +23,8 @@ pretty_name: OpenEnv Flow Debugger
 ---
 
 
-# OpenEnv Flow Debugger (Just a Simple Version for Now!)
+# OpenEnv Flow Debugger  
+*A real-world agentic debugging environment for Power Automate*
 
 This project is a small, easy-to-use debugging tool built with OpenEnv. It's inspired by those tricky real-world problems we hit in tools like Power Automate.
 

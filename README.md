@@ -1,27 +1,8 @@
----
-license: mit
-tags:
-  - openenv
-  - reinforcement-learning
-  - agentic-ai
-  - debugging
-  - power-automate
-  - automation
-  - llm
-library_name: openenv
-task_categories:
-  - reinforcement-learning
-  - reasoning
-  - debugging
-datasets:
-  - custom
-metrics:
-  - success-rate
-language:
-  - en
-pretty_name: OpenEnv Flow Debugger
----
+🔗 **Hugging Face Repository:**  
+https://huggingface.co/Akarztrk/openenv-flow-debugger
 
+📘 **Project Blog Post:**  
+https://huggingface.co/Akarztrk/openenv-flow-debugger/blob/main/blog.md
 
 # OpenEnv Flow Debugger  
 *A real-world agentic debugging environment for Power Automate*

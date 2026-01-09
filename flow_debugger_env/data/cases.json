@@ -1,0 +1,152 @@
+[
+  {
+    "case_id": "CASE_001",
+    "failed_step": "Condition_Check",
+    "error": {
+      "code": 400,
+      "message": "BadRequest",
+      "details": "InvalidTemplate: The expression is invalid (missing closing parenthesis)."
+    },
+    "steps": [
+      {
+        "name": "Compose_Ext",
+        "type": "compose",
+        "status": "Succeeded",
+        "outputs": "xlsx"
+      },
+      {
+        "name": "Condition_Check",
+        "type": "condition",
+        "status": "Failed",
+        "inputs": {
+          "expression": "@equals(outputs('Compose_Ext'),'xlsx'"
+        }
+      }
+    ],
+    "gold_fix": {
+      "step": "Condition_Check",
+      "field": "inputs.expression",
+      "value": "@equals(outputs('Compose_Ext'),'xlsx')"
+    }
+  },
+  {
+    "case_id": "CASE_002",
+    "failed_step": "Condition_Check",
+    "error": {
+      "code": 400,
+      "message": "BadRequest",
+      "details": "InvalidTemplate: The expression is invalid (extra closing parenthesis)."
+    },
+    "steps": [
+      {
+        "name": "Compose_Ext",
+        "type": "compose",
+        "status": "Succeeded",
+        "outputs": "xlsx"
+      },
+      {
+        "name": "Condition_Check",
+        "type": "condition",
+        "status": "Failed",
+        "inputs": {
+          "expression": "@equals(outputs('Compose_Ext'),'xlsx'))"
+        }
+      }
+    ],
+    "gold_fix": {
+      "step": "Condition_Check",
+      "field": "inputs.expression",
+      "value": "@equals(outputs('Compose_Ext'),'xlsx')"
+    }
+  },
+  {
+    "case_id": "CASE_003",
+    "failed_step": "Condition_Check",
+    "error": {
+      "code": 400,
+      "message": "BadRequest",
+      "details": "InvalidTemplate: The expression is invalid (missing quotes around string literal)."
+    },
+    "steps": [
+      {
+        "name": "Compose_Ext",
+        "type": "compose",
+        "status": "Succeeded",
+        "outputs": "xlsx"
+      },
+      {
+        "name": "Condition_Check",
+        "type": "condition",
+        "status": "Failed",
+        "inputs": {
+          "expression": "@equals(outputs('Compose_Ext'),xlsx)"
+        }
+      }
+    ],
+    "gold_fix": {
+      "step": "Condition_Check",
+      "field": "inputs.expression",
+      "value": "@equals(outputs('Compose_Ext'),'xlsx')"
+    }
+  },
+  {
+    "case_id": "CASE_004",
+    "failed_step": "Condition_Check",
+    "error": {
+      "code": 400,
+      "message": "BadRequest",
+      "details": "InvalidTemplate: Unknown function 'equal' (typo)."
+    },
+    "steps": [
+      {
+        "name": "Compose_Ext",
+        "type": "compose",
+        "status": "Succeeded",
+        "outputs": "xlsx"
+      },
+      {
+        "name": "Condition_Check",
+        "type": "condition",
+        "status": "Failed",
+        "inputs": {
+          "expression": "@equal(outputs('Compose_Ext'),'xlsx')"
+        }
+      }
+    ],
+    "gold_fix": {
+      "step": "Condition_Check",
+      "field": "inputs.expression",
+      "value": "@equals(outputs('Compose_Ext'),'xlsx')"
+    }
+  },
+  {
+    "case_id": "CASE_005",
+    "failed_step": "Condition_Check",
+    "error": {
+      "code": 400,
+      "message": "BadRequest",
+      "details": "InvalidTemplate: The expression is invalid (missing comma between args)."
+    },
+    "steps": [
+      {
+        "name": "Compose_Ext",
+        "type": "compose",
+        "status": "Succeeded",
+        "outputs": "xlsx"
+      },
+      {
+        "name": "Condition_Check",
+        "type": "condition",
+        "status": "Failed",
+        "inputs": {
+          "expression": "@equals(outputs('Compose_Ext') 'xlsx')"
+        }
+      }
+    ],
+    "gold_fix": {
+      "step": "Condition_Check",
+      "field": "inputs.expression",
+      "value": "@equals(outputs('Compose_Ext'),'xlsx')"
+    }
+  }
+]
